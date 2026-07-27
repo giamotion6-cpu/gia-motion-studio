@@ -7,7 +7,16 @@
   },
   "routes": [
     {
-      "handle": "filesystem"
+      "src": "/img/(.*)",
+      "dest": "/img/$1"
+    },
+    {
+      "src": "/style/(.*)",
+      "dest": "/style/$1"
+    },
+    {
+      "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|txt))",
+      "dest": "/$1"
     },
     {
       "src": "/(.*)",
