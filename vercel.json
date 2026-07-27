@@ -2,28 +2,9 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/nosotros",
-      "destination": "/index.php"
-    },
-    {
-      "source": "/servicios",
-      "destination": "/index.php"
-    },
-    {
-      "source": "/portafolio",
-      "destination": "/index.php"
-    },
-    {
-      "source": "/blog",
-      "destination": "/index.php"
-    },
-    {
-      "source": "/contacto",
-      "destination": "/index.php"
-    },
-    {
       "source": "/(.*)",
-      "destination": "/index.php"
+      "destination": "/index.html"
     }
   ]
 }
+
