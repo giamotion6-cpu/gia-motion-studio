@@ -1,0 +1,13 @@
+# GIA MOTION - .htaccess para Apache
+# Habilitar reescritura de URLs
+RewriteEngine On
+
+# Directorio base (ajustar si el sitio está en una subcarpeta)
+# RewriteBase /gia_motion/
+
+# No reescribir archivos estáticos que existen
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rutear todo lo demás a index.php
+RewriteRule ^(.*)$ index.php [QSA,L]

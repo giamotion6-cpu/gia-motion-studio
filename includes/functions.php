@@ -11,6 +11,14 @@ function getCurrentRoute() {
     $uri = rtrim($uri, '/');
     $uri = filter_var($uri, FILTER_SANITIZE_URL);
 
+    // Si BASE_URL usa subcarpeta, quitar ese prefijo antes de mapear la ruta.
+    $basePath = parse_url(BASE_URL, PHP_URL_PATH);
+    $basePath = rtrim($basePath ?: '/', '/');
+    if ($basePath !== '' && $basePath !== '/' && strpos($uri, $basePath) === 0) {
+        $uri = substr($uri, strlen($basePath));
+        $uri = $uri === '' ? '/' : $uri;
+    }
+
     // Normalizar rutas
     if ($uri === '' || $uri === '/index.php') {
         return 'home';
@@ -85,5 +93,21 @@ function truncate($text, $length = 100, $suffix = '...') {
 function formatDate($date) {
     $timestamp = strtotime($date);
     return date('d \d\e F \d\e Y', $timestamp);
+}
+
+/**
+ * Devuelve la URL del logo principal, compatible con nombre actual y legado.
+ */
+function getLogoURL() {
+    $candidates = ['LOGO GIAMOTION.png', 'LOGO_GIAMOTION.png'];
+
+    foreach ($candidates as $fileName) {
+        if (file_exists(__DIR__ . '/../img/' . $fileName)) {
+            return IMG_URL . rawurlencode($fileName);
+        }
+    }
+
+    // Fallback para evitar romper la UI si el archivo no existe temporalmente.
+    return IMG_URL . rawurlencode($candidates[0]);
 }
 ?>

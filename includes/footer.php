@@ -13,7 +13,7 @@
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="site-logo">
                         <a href="<?php echo BASE_URL; ?>">
-                            <img src="<?php echo IMG_URL; ?>LOGO_GIAMOTION.png" alt="<?php echo COMPANY_NAME; ?>">
+                            <img src="<?php echo getLogoURL(); ?>" alt="<?php echo COMPANY_NAME; ?>">
                         </a>
                     </div>
                     <div class="widget-text">

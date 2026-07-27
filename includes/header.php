@@ -30,7 +30,7 @@
 <body class="page-<?php echo getCurrentRoute(); ?>">
     <!-- Preloader -->
     <div class="preloader">
-        <div class="preloader_img"><img src="<?php echo IMG_URL; ?>LOGO_GIAMOTION.png" alt="<?php echo COMPANY_NAME; ?>"></div>
+        <div class="preloader_img"><img src="<?php echo getLogoURL(); ?>" alt="<?php echo COMPANY_NAME; ?>"></div>
     </div>
 
     <!-- Header -->
@@ -40,7 +40,7 @@
                 <div class="logo-block col-auto">
                     <div class="site-logo">
                         <a href="<?php echo BASE_URL; ?>">
-                            <img src="<?php echo IMG_URL; ?>LOGO_GIAMOTION.png" alt="<?php echo COMPANY_NAME; ?>">
+                            <img src="<?php echo getLogoURL(); ?>" alt="<?php echo COMPANY_NAME; ?>">
                         </a>
                     </div>
                 </div>
