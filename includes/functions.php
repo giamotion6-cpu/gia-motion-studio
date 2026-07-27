@@ -99,7 +99,7 @@ function formatDate($date) {
  * Devuelve la URL del logo principal, compatible con nombre actual y legado.
  */
 function getLogoURL() {
-    $candidates = ['LOGO GIAMOTION.png', 'LOGO_GIAMOTION.png'];
+    $candidates = ['logo_gia.png', 'LOGO GIAMOTION.png', 'LOGO_GIAMOTION.png'];
 
     foreach ($candidates as $fileName) {
         if (file_exists(__DIR__ . '/../img/' . $fileName)) {
