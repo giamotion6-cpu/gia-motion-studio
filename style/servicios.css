@@ -66,6 +66,7 @@
 .service-icon {
     font-size: 60px;
     margin-bottom: 15px;
+    color: #f2f2f2;
 }
 
 .service-item .h {
@@ -118,6 +119,11 @@
     margin-bottom: 20px;
 }
 
+.highlight-icon i,
+.service-icon i {
+    display: inline-block;
+}
+
 .highlight-item .h {
     font-size: 24px;
     margin-bottom: 15px;
@@ -155,9 +161,27 @@
 
     .service-item {
         text-align: center;
+        padding: 30px 0;
     }
 
     .service-icon {
-        font-size: 50px;
+        font-size: 42px;
+    }
+
+    .services-highlight {
+        padding: 50px 0;
+    }
+
+    .services-highlight .h {
+        font-size: 30px;
+    }
+
+    .highlight-item {
+        padding: 24px 18px;
+    }
+
+    .highlight-icon {
+        font-size: 30px;
+        margin-bottom: 14px;
     }
 }

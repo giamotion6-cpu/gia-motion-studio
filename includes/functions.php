@@ -7,6 +7,11 @@
  * Obtiene la ruta actual de la solicitud
  */
 function getCurrentRoute() {
+    $queryRoute = strtolower(trim($_GET['page'] ?? ''));
+    if ($queryRoute !== '' && array_key_exists($queryRoute, PAGES)) {
+        return $queryRoute;
+    }
+
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     $uri = rtrim($uri, '/');
     $uri = filter_var($uri, FILTER_SANITIZE_URL);
@@ -54,6 +59,48 @@ function getPageCSS() {
     $pages = PAGES;
 
     return STYLE_URL . $pages[$route]['css'];
+}
+
+/**
+ * Obtiene una URL interna pasando por el enrutador principal.
+ */
+function getPageUrl($page = 'home', $fragment = '') {
+    $page = strtolower(trim((string) $page));
+    $url = BASE_URL;
+
+    if ($page !== '' && $page !== 'home' && array_key_exists($page, PAGES)) {
+        $url .= '?page=' . rawurlencode($page);
+    }
+
+    if ($fragment !== '') {
+        $url .= '#' . rawurlencode($fragment);
+    }
+
+    return $url;
+}
+
+/**
+ * Convierte texto a slug seguro para IDs y anclas.
+ */
+function slugify($text) {
+    $text = strtolower(trim((string) $text));
+    $text = strtr($text, [
+        'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
+        'à' => 'a', 'è' => 'e', 'ì' => 'i', 'ò' => 'o', 'ù' => 'u',
+        'ä' => 'a', 'ë' => 'e', 'ï' => 'i', 'ö' => 'o', 'ü' => 'u',
+        'ñ' => 'n', 'ç' => 'c'
+    ]);
+    $text = preg_replace('/[^a-z0-9]+/', '-', $text);
+    $text = trim($text, '-');
+
+    return $text !== '' ? $text : 'item';
+}
+
+/**
+ * Genera la ancla para un servicio.
+ */
+function serviceAnchor($title) {
+    return slugify($title);
 }
 
 /**

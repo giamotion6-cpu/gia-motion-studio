@@ -41,7 +41,7 @@
                         <div class="menu-footer-links-1-container">
                             <ul class="menu">
                                 <?php foreach (SERVICES as $service): ?>
-                                    <li><a href="<?php echo BASE_URL; ?>servicios#<?php echo strtolower($service['title']); ?>">
+                                    <li><a href="<?php echo getPageUrl('servicios', serviceAnchor($service['title'])); ?>">
                                         <?php echo $service['title']; ?></a></li>
                                 <?php endforeach; ?>
                             </ul>
@@ -55,10 +55,10 @@
                         <h6 class="widget-title">LINKS</h6>
                         <div class="menu-footer-links-2-container">
                             <ul class="menu">
-                                <li><a href="<?php echo BASE_URL; ?>blog">Blog</a></li>
-                                <li><a href="<?php echo BASE_URL; ?>nosotros">Nosotros</a></li>
-                                <li><a href="<?php echo BASE_URL; ?>portafolio">Portafolio</a></li>
-                                <li><a href="<?php echo BASE_URL; ?>contacto">Contáctanos</a></li>
+                                <li><a href="<?php echo getPageUrl('blog'); ?>">Blog</a></li>
+                                <li><a href="<?php echo getPageUrl('nosotros'); ?>">Nosotros</a></li>
+                                <li><a href="<?php echo getPageUrl('portafolio'); ?>">Portafolio</a></li>
+                                <li><a href="<?php echo getPageUrl('contacto'); ?>">Contáctanos</a></li>
                             </ul>
                         </div>
                     </div>

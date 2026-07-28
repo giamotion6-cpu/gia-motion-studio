@@ -177,7 +177,7 @@
 
 .banner-social-links {
     position: absolute;
-    left: 30px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
@@ -186,22 +186,29 @@
 .banner-social-links .social-links-with-label {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
 .banner-social-links a {
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(0, 0, 0, 0.45);
     color: #fff;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 18px;
     transition: all 0.3s ease;
 }
 
 .banner-social-links a:hover {
-    color: #ccc;
-    padding-left: 5px;
+    color: #000;
+    background: #fff;
+    border-color: #fff;
+    transform: translateX(-3px);
 }
 
 /* Sección de Presentación */
@@ -483,7 +490,10 @@
     }
 
     .banner-social-links {
-        left: 15px;
+        right: 12px;
+        top: auto;
+        bottom: 120px;
+        transform: none;
     }
 }
 

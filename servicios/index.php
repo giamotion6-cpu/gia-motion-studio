@@ -48,11 +48,22 @@
 <!-- Lista de Servicios -->
 <section class="services-list">
     <div class="container">
+        <?php
+        $serviceIcons = [
+            'video' => 'fa-solid fa-video',
+            'fotografia' => 'fa-solid fa-camera',
+            'drone' => 'fa-solid fa-helicopter',
+            'streaming' => 'fa-solid fa-tower-broadcast',
+            '360-realidad-virtual' => 'fa-solid fa-vr-cardboard',
+            'marketing-digital' => 'fa-solid fa-chart-line'
+        ];
+        ?>
         <?php foreach (SERVICES as $index => $service): ?>
-            <div class="service-item <?php echo $index % 2 === 0 ? 'even' : 'odd'; ?>" id="<?php echo strtolower($service['title']); ?>">
+            <?php $serviceKey = serviceAnchor($service['title']); ?>
+            <div class="service-item <?php echo $index % 2 === 0 ? 'even' : 'odd'; ?>" id="<?php echo $serviceKey; ?>">
                 <div class="row align-items-center">
                     <div class="col-md-4">
-                        <div class="service-icon"><?php echo $service['icon']; ?></div>
+                        <div class="service-icon"><i class="<?php echo $serviceIcons[$serviceKey] ?? 'fa-solid fa-circle'; ?>" aria-hidden="true"></i></div>
                         <h3 class="h"><?php echo $service['title']; ?></h3>
                     </div>
                     <div class="col-md-8">
@@ -75,28 +86,28 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="highlight-item">
-                    <div class="highlight-icon">✓</div>
+                    <div class="highlight-icon"><i class="fa-solid fa-award" aria-hidden="true"></i></div>
                     <h3 class="h">Experiencia</h3>
                     <div class="text">Más de 10 años de experiencia en el sector audiovisual.</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="highlight-item">
-                    <div class="highlight-icon">✓</div>
+                    <div class="highlight-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
                     <h3 class="h">Tecnología</h3>
                     <div class="text">Utilizamos equipos y software de última generación.</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="highlight-item">
-                    <div class="highlight-icon">✓</div>
+                    <div class="highlight-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
                     <h3 class="h">Calidad</h3>
                     <div class="text">Garantizamos resultados de alta calidad en cada proyecto.</div>
                 </div>
             </div>
         </div>
         <div class="button-container text-center">
-            <a class="button-style1 with-arrow" href="<?php echo BASE_URL; ?>contacto">
+            <a class="button-style1 with-arrow" href="<?php echo getPageUrl('contacto'); ?>">
                 <span>COTIZA YA</span>
             </a>
         </div>

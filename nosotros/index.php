@@ -39,7 +39,7 @@
                     equipos de vanguardia para garantizar resultados excepcionales en cada proyecto.</p>
                 </div>
                 <div class="button-container">
-                    <a class="button-style1 with-arrow" href="<?php echo BASE_URL; ?>contacto">
+                    <a class="button-style1 with-arrow" href="<?php echo getPageUrl('contacto'); ?>">
                         <span>TRABAJEMOS JUNTOS</span>
                     </a>
                 </div>
@@ -62,21 +62,21 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="value-item">
-                    <div class="value-icon">🎯</div>
+                    <div class="value-icon"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></div>
                     <h3 class="h">Excelencia</h3>
                     <div class="text">Nos comprometemos a entregar resultados excepcionales en cada proyecto.</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="value-item">
-                    <div class="value-icon">🤝</div>
+                    <div class="value-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
                     <h3 class="h">Innovación</h3>
                     <div class="text">Utilizamos las últimas tecnologías y tendencias del sector.</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="value-item">
-                    <div class="value-icon">⚡</div>
+                    <div class="value-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
                     <h3 class="h">Pasión</h3>
                     <div class="text">Trabajamos con pasión y dedicación en cada proyecto que emprendemos.</div>
                 </div>

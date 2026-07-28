@@ -92,7 +92,7 @@ $projects = [
                 <div class="col-md-4">
                     <div class="portfolio-item">
                         <div class="img-block">
-                            <div class="img" style="background-image: url('<?php echo IMG_URL; ?>portfolio-<?php echo $project['image']; ?>')"></div>
+                            <div class="img" style="background-image: url('<?php echo IMG_URL . $project['image']; ?>')"></div>
                             <div class="overlay">
                                 <div class="overlay-content">
                                     <h3 class="h"><?php echo $project['title']; ?></h3>
@@ -120,7 +120,7 @@ $projects = [
             <div class="text">Contáctanos para cotizar tu proyecto</div>
         </div>
         <div class="button-container">
-            <a class="button-style1 with-arrow" href="<?php echo BASE_URL; ?>contacto">
+            <a class="button-style1 with-arrow" href="<?php echo getPageUrl('contacto'); ?>">
                 <span>CUÉNTANOS</span>
             </a>
         </div>

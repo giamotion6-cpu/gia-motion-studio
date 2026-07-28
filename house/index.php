@@ -28,9 +28,9 @@
 
     <div class="banner-social-links">
         <div class="social-links-with-label">
-            <a href="<?php echo SOCIAL_FACEBOOK; ?>" target="_blank"><i class="fab fa-facebook-square"></i><span>Facebook</span></a>
-            <a href="<?php echo SOCIAL_INSTAGRAM; ?>" target="_blank"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-            <a href="<?php echo SOCIAL_WHATSAPP; ?>" target="_blank"><i class="fab fa-whatsapp-square"></i><span>Whatsapp</span></a>
+            <a href="<?php echo SOCIAL_FACEBOOK; ?>" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="<?php echo SOCIAL_INSTAGRAM; ?>" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="<?php echo SOCIAL_WHATSAPP; ?>" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
     </div>
 
@@ -56,7 +56,7 @@
                                 Diseño y páginas webs<br>
                                 Topografía con drones
                             </div>
-                            <a class="button-style1" href="<?php echo BASE_URL; ?>servicios"><span>Conocer más</span></a>
+                            <a class="button-style1" href="<?php echo getPageUrl('servicios'); ?>"><span>Conocer más</span></a>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                                 Cartografía digital y geoespacial<br>
                                 Aplicaciones de drones en minería
                             </div>
-                            <a class="button-style1" href="<?php echo BASE_URL; ?>servicios#drone"><span>Conocer más</span></a>
+                            <a class="button-style1" href="<?php echo getPageUrl('servicios', 'drone'); ?>"><span>Conocer más</span></a>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                                 Transmisión en vivo de eventos<br>
                                 Contenido para redes sociales
                             </div>
-                            <a class="button-style1" href="<?php echo BASE_URL; ?>servicios#video"><span>Conocer más</span></a>
+                            <a class="button-style1" href="<?php echo getPageUrl('servicios', 'video'); ?>"><span>Conocer más</span></a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                     video y foto 360°, diseño y páginas web, y topografía con drones.
                 </div>
                 <div class="button-container">
-                    <a class="button-style1 with-arrow" href="<?php echo BASE_URL; ?>nosotros">
+                    <a class="button-style1 with-arrow" href="<?php echo getPageUrl('nosotros'); ?>">
                         <span>CONOCER MÁS</span>
                     </a>
                 </div>

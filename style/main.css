@@ -85,6 +85,37 @@ h6, .h6 {
     padding: 0 15px;
 }
 
+.col {
+    flex: 1 0 0%;
+    min-width: 0;
+}
+
+.col-auto {
+    flex: 0 0 auto;
+    width: auto;
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.full-height {
+    min-height: 100%;
+}
+
 /* Preloader */
 .preloader {
     position: fixed;
@@ -127,6 +158,14 @@ h6, .h6 {
     padding: 15px 0;
 }
 
+.site-header .row {
+    margin: 0;
+}
+
+.site-header .row > * {
+    padding: 0;
+}
+
 .site-header .site-logo img {
     height: 50px;
     width: auto;
@@ -136,6 +175,7 @@ h6, .h6 {
     list-style: none;
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 
 .navigation ul li {
@@ -182,6 +222,33 @@ h6, .h6 {
 
 .nav-butter {
     display: none;
+}
+
+.nav-butter {
+    width: 32px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.nav-butter span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-open .nav-butter span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav-open .nav-butter span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-open .nav-butter span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Espaciado del header */
@@ -330,6 +397,13 @@ h6, .h6 {
 
 /* Responsive */
 @media (max-width: 992px) {
+    .col-md-4,
+    .col-md-6,
+    .col-md-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
     .navigation ul {
         gap: 15px;
     }
@@ -340,12 +414,56 @@ h6, .h6 {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .site-header .container {
+        padding: 10px 16px;
+    }
+
+    .site-header .site-logo img {
+        height: 42px;
+    }
+
+    .nav-butter {
+        display: block;
+    }
+
+    .navigation {
+        position: fixed;
+        top: 62px;
+        right: 0;
+        width: min(320px, 85vw);
+        height: calc(100vh - 62px);
+        background: rgba(0, 0, 0, 0.96);
+        backdrop-filter: blur(6px);
+        padding: 20px 16px 28px;
+        transform: translateX(110%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .nav-open .navigation {
+        transform: translateX(0);
+    }
+
     .navigation ul {
-        gap: 10px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
     }
 
     .navigation ul li a {
-        font-size: 13px;
+        display: block;
+        font-size: 14px;
+        letter-spacing: 0.8px;
+        padding: 12px 10px;
+        border-bottom: 1px solid #1d1d1d;
+    }
+
+    .navigation ul li a::after {
+        display: none;
     }
 
     h1, .h1 { font-size: 36px; }
@@ -355,17 +473,67 @@ h6, .h6 {
     .header-space {
         height: 70px;
     }
+
+    .site-footer {
+        padding: 45px 0 24px;
+    }
+
+    .site-footer .row > * {
+        margin-bottom: 24px;
+    }
+
+    body.nav-open {
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 576px) {
-    .navigation ul {
-        gap: 5px;
+    .site-header .container {
+        padding: 10px 14px;
     }
 
-    .navigation ul li a {
-        font-size: 12px;
+    .site-header .site-logo img {
+        height: 38px;
     }
 
     h1, .h1 { font-size: 28px; }
     h2, .h2 { font-size: 24px; }
+
+    .navigation {
+        top: 58px;
+        height: calc(100vh - 58px);
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-md-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
 }

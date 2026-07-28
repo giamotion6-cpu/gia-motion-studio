@@ -48,22 +48,22 @@
                     <nav class="navigation visible_menu">
                         <ul id="menu-navigation" class="menu">
                             <li class="menu-item <?php echo activeClass('home'); ?>">
-                                <a href="<?php echo BASE_URL; ?>"><span>Inicio</span></a>
+                                <a href="<?php echo getPageUrl('home'); ?>"><span>Inicio</span></a>
                             </li>
                             <li class="menu-item <?php echo activeClass('nosotros'); ?>">
-                                <a href="<?php echo BASE_URL; ?>nosotros"><span>Nosotros</span></a>
+                                <a href="<?php echo getPageUrl('nosotros'); ?>"><span>Nosotros</span></a>
                             </li>
                             <li class="menu-item <?php echo activeClass('servicios'); ?>">
-                                <a href="<?php echo BASE_URL; ?>servicios"><span>Servicios</span></a>
+                                <a href="<?php echo getPageUrl('servicios'); ?>"><span>Servicios</span></a>
                             </li>
                             <li class="menu-item <?php echo activeClass('portafolio'); ?>">
-                                <a href="<?php echo BASE_URL; ?>portafolio"><span>Portafolio</span></a>
+                                <a href="<?php echo getPageUrl('portafolio'); ?>"><span>Portafolio</span></a>
                             </li>
                             <li class="menu-item <?php echo activeClass('blog'); ?>">
-                                <a href="<?php echo BASE_URL; ?>blog"><span>Blog</span></a>
+                                <a href="<?php echo getPageUrl('blog'); ?>"><span>Blog</span></a>
                             </li>
                             <li class="menu-item <?php echo activeClass('contacto'); ?>">
-                                <a href="<?php echo BASE_URL; ?>contacto"><span>Contáctanos</span></a>
+                                <a href="<?php echo getPageUrl('contacto'); ?>"><span>Contáctanos</span></a>
                             </li>
                         </ul>
                     </nav>

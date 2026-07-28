@@ -20,8 +20,20 @@ define('SOCIAL_INSTAGRAM', '#');
 define('SOCIAL_WHATSAPP', 'https://wa.me/51999999999');
 
 // Configuración de rutas
-// BASE_URL: cambiar si el sitio está en una subcarpeta (ej: '/gia_motion/')
-define('BASE_URL', '/');
+// BASE_URL se detecta automáticamente para soportar raíz o subcarpeta.
+$scriptName = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '');
+$scriptDir = trim(dirname($scriptName), '/.');
+$requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+$projectFolder = basename(__DIR__ . '/..');
+
+$baseUrl = '/';
+if ($scriptDir !== '') {
+    $baseUrl = '/' . $scriptDir . '/';
+} elseif ($requestPath === '/' . $projectFolder || strpos($requestPath, '/' . $projectFolder . '/') === 0) {
+    $baseUrl = '/' . $projectFolder . '/';
+}
+
+define('BASE_URL', $baseUrl);
 define('ASSETS_URL', BASE_URL . 'assets/');
 define('IMG_URL', BASE_URL . 'img/');
 define('STYLE_URL', BASE_URL . 'style/');

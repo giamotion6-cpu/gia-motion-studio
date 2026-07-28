@@ -5,6 +5,24 @@
 jQuery(document).ready(function ($) {
     "use strict";
 
+    // Menú móvil
+    var $menuToggle = $(".nav-butter");
+    var $menuLinks = $(".navigation a");
+
+    $menuToggle.on("click", function () {
+        $("body").toggleClass("nav-open");
+    });
+
+    $menuLinks.on("click", function () {
+        $("body").removeClass("nav-open");
+    });
+
+    $(window).on("resize", function () {
+        if (window.innerWidth > 768) {
+            $("body").removeClass("nav-open");
+        }
+    });
+
     // Preloader
     $(".preloader").fadeOut(500);
 
