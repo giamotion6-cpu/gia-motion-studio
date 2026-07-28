@@ -5,7 +5,7 @@
 ?>
 
 <!-- Banner de Servicios -->
-<section class="page-banner" style="background-image: url('<?php echo IMG_URL; ?>servicios-banner.jpg')">
+<section class="page-banner" style="background-image: url('<?php echo imageUrl('servicios-banner.jpg'); ?>')">
     <div class="bg-overlay">
         <div class="color"></div>
     </div>
@@ -38,7 +38,7 @@
             </div>
             <div class="col-md-6">
                 <div class="services-image">
-                    <img src="<?php echo IMG_URL; ?>servicios-image.jpg" alt="Servicios GIA MOTION">
+                    <img src="<?php echo imageUrl('servicios-image.jpg'); ?>" alt="Servicios GIA MOTION">
                 </div>
             </div>
         </div>

@@ -20,11 +20,11 @@ define('SOCIAL_INSTAGRAM', '#');
 define('SOCIAL_WHATSAPP', 'https://wa.me/51999999999');
 
 // Configuración de rutas
-// BASE_URL se detecta automáticamente para soportar raíz o subcarpeta.
+// Detecta la base del proyecto para soportar localhost/gia_motion y raíz de dominio.
 $scriptName = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '');
 $scriptDir = trim(dirname($scriptName), '/.');
 $requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
-$projectFolder = basename(__DIR__ . '/..');
+$projectFolder = basename(dirname(__DIR__));
 
 $baseUrl = '/';
 if ($scriptDir !== '') {
@@ -35,8 +35,30 @@ if ($scriptDir !== '') {
 
 define('BASE_URL', $baseUrl);
 define('ASSETS_URL', BASE_URL . 'assets/');
-define('IMG_URL', BASE_URL . 'img/');
 define('STYLE_URL', BASE_URL . 'style/');
+define('LEGACY_IMG_URL', BASE_URL . 'img/');
+define('LEGACY_VIDEO_URL', BASE_URL . 'videos/');
+define('LEGACY_UPLOADS_URL', BASE_URL . 'uploads/');
+
+// Carpeta unica para todo el contenido (imagenes, videos y archivos subidos).
+// Puedes cambiar estas rutas manualmente por CDN o cualquier otra URL.
+define('MEDIA_IMAGES_BASE', BASE_URL . 'media/');
+define('MEDIA_VIDEOS_BASE', BASE_URL . 'media/');
+define('MEDIA_UPLOADS_BASE', BASE_URL . 'media/');
+
+// Fallback: si un archivo no existe en media/, busca en carpetas heredadas.
+define('MEDIA_LEGACY_FALLBACK', true);
+
+// Mantener constantes legacy para compatibilidad con plantillas antiguas.
+define('IMG_URL', MEDIA_IMAGES_BASE);
+define('VIDEO_URL', MEDIA_VIDEOS_BASE);
+define('UPLOADS_URL', MEDIA_UPLOADS_BASE);
+
+// Rutas físicas para validar fallback local.
+define('MEDIA_DIR', dirname(__DIR__) . '/media/');
+define('LEGACY_IMG_DIR', dirname(__DIR__) . '/img/');
+define('LEGACY_VIDEO_DIR', dirname(__DIR__) . '/videos/');
+define('LEGACY_UPLOADS_DIR', dirname(__DIR__) . '/uploads/');
 
 // Configuración de páginas
 define('PAGES', [

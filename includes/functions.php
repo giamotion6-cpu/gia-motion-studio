@@ -58,7 +58,7 @@ function getPageCSS() {
     $route = getCurrentRoute();
     $pages = PAGES;
 
-    return STYLE_URL . $pages[$route]['css'];
+    return rtrim(STYLE_URL, '/') . '/' . $pages[$route]['css'];
 }
 
 /**
@@ -143,18 +143,97 @@ function formatDate($date) {
 }
 
 /**
+ * Genera la URL correcta para un archivo de imagen, banner, video o subida.
+ */
+function assetUrl($path, $folder = 'img') {
+    $path = trim((string) $path);
+    if ($path === '') {
+        return '';
+    }
+
+    if (preg_match('#^(https?:)?//#', $path) || strpos($path, 'data:') === 0 || strpos($path, '#') === 0) {
+        return $path;
+    }
+
+    if (strpos($path, '/') === 0) {
+        return $path;
+    }
+
+    $base = MEDIA_IMAGES_BASE;
+    $dir = MEDIA_DIR;
+    $legacyBase = LEGACY_IMG_URL;
+    $legacyDir = LEGACY_IMG_DIR;
+
+    switch (strtolower($folder)) {
+        case 'video':
+        case 'videos':
+            $base = MEDIA_VIDEOS_BASE;
+            $dir = MEDIA_DIR;
+            $legacyBase = LEGACY_VIDEO_URL;
+            $legacyDir = LEGACY_VIDEO_DIR;
+            break;
+        case 'upload':
+        case 'uploads':
+            $base = MEDIA_UPLOADS_BASE;
+            $dir = MEDIA_DIR;
+            $legacyBase = LEGACY_UPLOADS_URL;
+            $legacyDir = LEGACY_UPLOADS_DIR;
+            break;
+        case 'style':
+        case 'styles':
+            $base = STYLE_URL;
+            $dir = dirname(__DIR__) . '/style/';
+            $legacyBase = STYLE_URL;
+            $legacyDir = dirname(__DIR__) . '/style/';
+            break;
+    }
+
+    $cleanPath = ltrim($path, '/');
+    $preferredFile = rtrim($dir, '/\\') . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $cleanPath);
+    $legacyFile = rtrim($legacyDir, '/\\') . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $cleanPath);
+
+    if (defined('MEDIA_LEGACY_FALLBACK') && MEDIA_LEGACY_FALLBACK) {
+        if (is_file($preferredFile)) {
+            return rtrim($base, '/') . '/' . $cleanPath;
+        }
+
+        if (is_file($legacyFile)) {
+            return rtrim($legacyBase, '/') . '/' . $cleanPath;
+        }
+    }
+
+    return rtrim($base, '/') . '/' . $cleanPath;
+}
+
+function imageUrl($path) {
+    return assetUrl($path, 'img');
+}
+
+function videoUrl($path) {
+    return assetUrl($path, 'videos');
+}
+
+function uploadUrl($path) {
+    return assetUrl($path, 'uploads');
+}
+
+/**
  * Devuelve la URL del logo principal, compatible con nombre actual y legado.
  */
 function getLogoURL() {
     $candidates = ['logo_gia.png', 'LOGO GIAMOTION.png', 'LOGO_GIAMOTION.png'];
 
     foreach ($candidates as $fileName) {
-        if (file_exists(__DIR__ . '/../img/' . $fileName)) {
-            return IMG_URL . rawurlencode($fileName);
+        if (is_file(MEDIA_DIR . $fileName)) {
+            return imageUrl($fileName);
+        }
+
+        if (is_file(LEGACY_IMG_DIR . $fileName)) {
+            return LEGACY_IMG_URL . rawurlencode($fileName);
         }
     }
 
     // Fallback para evitar romper la UI si el archivo no existe temporalmente.
-    return IMG_URL . rawurlencode($candidates[0]);
+    return imageUrl($candidates[0]);
 }
 ?>

@@ -57,7 +57,7 @@ $posts = [
 ?>
 
 <!-- Banner de Blog -->
-<section class="page-banner" style="background-image: url('<?php echo IMG_URL; ?>blog-banner.jpg')">
+<section class="page-banner" style="background-image: url('<?php echo imageUrl('blog-banner.jpg'); ?>')">
     <div class="bg-overlay">
         <div class="color"></div>
     </div>
@@ -89,7 +89,7 @@ $posts = [
             </div>
             <div class="col-md-6">
                 <div class="blog-image">
-                    <img src="<?php echo IMG_URL; ?>blog-image.jpg" alt="Blog GIA MOTION">
+                    <img src="<?php echo imageUrl('blog-image.jpg'); ?>" alt="Blog GIA MOTION">
                 </div>
             </div>
         </div>
@@ -104,7 +104,7 @@ $posts = [
                 <div class="col-md-6">
                     <div class="blog-item">
                         <div class="blog-image">
-                            <div class="img" style="background-image: url('<?php echo IMG_URL; ?><?php echo $post['image']; ?>')"></div>
+                            <div class="img" style="background-image: url('<?php echo imageUrl($post['image']); ?>')"></div>
                             <div class="blog-category"><?php echo $post['category']; ?></div>
                         </div>
                         <div class="blog-content">

@@ -39,7 +39,9 @@
         <div class="swiper-slide">
             <div class="banner-item tal">
                 <div class="bg-overlay">
-                    <div class="image" style="background-image: url('<?php echo IMG_URL; ?>banner-1.jpg')"></div>
+                    <video class="video" autoplay muted loop playsinline preload="metadata" poster="<?php echo imageUrl('banner-1.jpg'); ?>">
+                        <source src="<?php echo imageUrl('hause/baner1.mp4'); ?>" type="video/mp4">
+                    </video>
                 </div>
                 <div class="container">
                     <div class="row full-height align-items-center">
@@ -67,7 +69,7 @@
         <div class="swiper-slide">
             <div class="banner-item tal">
                 <div class="bg-overlay">
-                    <div class="image" style="background-image: url('<?php echo IMG_URL; ?>banner-2.jpg')"></div>
+                    <div class="image" style="background-image: url('<?php echo imageUrl('banner-2.jpg'); ?>')"></div>
                 </div>
                 <div class="container">
                     <div class="row full-height align-items-center">
@@ -94,7 +96,7 @@
         <div class="swiper-slide">
             <div class="banner-item tal">
                 <div class="bg-overlay">
-                    <div class="image" style="background-image: url('<?php echo IMG_URL; ?>banner-3.jpg')"></div>
+                    <div class="image" style="background-image: url('<?php echo imageUrl('banner-3.jpg'); ?>')"></div>
                 </div>
                 <div class="container">
                     <div class="row full-height align-items-center">
@@ -140,7 +142,7 @@
             </div>
             <div class="col-md-6">
                 <div class="profile-image">
-                    <img src="<?php echo IMG_URL; ?>profile.jpg" alt="GIA MOTION">
+                    <img src="<?php echo imageUrl('profile.jpg'); ?>" alt="GIA MOTION">
                 </div>
             </div>
         </div>
@@ -159,7 +161,7 @@
                 <div class="swiper-slide">
                     <div class="portfolio-item">
                         <div class="img-block">
-                            <div class="img" style="background-image: url('<?php echo IMG_URL; ?>portfolio-1.jpg')"></div>
+                            <div class="img" style="background-image: url('<?php echo imageUrl('portfolio-1.jpg'); ?>')"></div>
                         </div>
                         <div class="content">
                             <h5 class="h">Proyecto Industrial</h5>
@@ -170,7 +172,7 @@
                 <div class="swiper-slide">
                     <div class="portfolio-item">
                         <div class="img-block">
-                            <div class="img" style="background-image: url('<?php echo IMG_URL; ?>portfolio-2.jpg')"></div>
+                            <div class="img" style="background-image: url('<?php echo imageUrl('portfolio-2.jpg'); ?>')"></div>
                         </div>
                         <div class="content">
                             <h5 class="h">Evento Empresarial</h5>
@@ -181,7 +183,7 @@
                 <div class="swiper-slide">
                     <div class="portfolio-item">
                         <div class="img-block">
-                            <div class="img" style="background-image: url('<?php echo IMG_URL; ?>portfolio-3.jpg')"></div>
+                            <div class="img" style="background-image: url('<?php echo imageUrl('portfolio-3.jpg'); ?>')"></div>
                         </div>
                         <div class="content">
                             <h5 class="h">Topografía Aérea</h5>
@@ -192,7 +194,7 @@
                 <div class="swiper-slide">
                     <div class="portfolio-item">
                         <div class="img-block">
-                            <div class="img" style="background-image: url('<?php echo IMG_URL; ?>portfolio-4.jpg')"></div>
+                            <div class="img" style="background-image: url('<?php echo imageUrl('portfolio-4.jpg'); ?>')"></div>
                         </div>
                         <div class="content">
                             <h5 class="h">Transmisión en Vivo</h5>
@@ -203,7 +205,7 @@
                 <div class="swiper-slide">
                     <div class="portfolio-item">
                         <div class="img-block">
-                            <div class="img" style="background-image: url('<?php echo IMG_URL; ?>portfolio-5.jpg')"></div>
+                            <div class="img" style="background-image: url('<?php echo imageUrl('portfolio-5.jpg'); ?>')"></div>
                         </div>
                         <div class="content">
                             <h5 class="h">Video 360°</h5>
@@ -260,32 +262,32 @@
             <div class="swiper-wrapper">
                 <div class="brand-item swiper-slide">
                     <div class="content">
-                        <img src="<?php echo IMG_URL; ?>client-1.png" alt="Cliente 1">
+                        <img src="<?php echo imageUrl('client-1.png'); ?>" alt="Cliente 1">
                     </div>
                 </div>
                 <div class="brand-item swiper-slide">
                     <div class="content">
-                        <img src="<?php echo IMG_URL; ?>client-2.png" alt="Cliente 2">
+                        <img src="<?php echo imageUrl('client-2.png'); ?>" alt="Cliente 2">
                     </div>
                 </div>
                 <div class="brand-item swiper-slide">
                     <div class="content">
-                        <img src="<?php echo IMG_URL; ?>client-3.png" alt="Cliente 3">
+                        <img src="<?php echo imageUrl('client-3.png'); ?>" alt="Cliente 3">
                     </div>
                 </div>
                 <div class="brand-item swiper-slide">
                     <div class="content">
-                        <img src="<?php echo IMG_URL; ?>client-4.png" alt="Cliente 4">
+                        <img src="<?php echo imageUrl('client-4.png'); ?>" alt="Cliente 4">
                     </div>
                 </div>
                 <div class="brand-item swiper-slide">
                     <div class="content">
-                        <img src="<?php echo IMG_URL; ?>client-5.png" alt="Cliente 5">
+                        <img src="<?php echo imageUrl('client-5.png'); ?>" alt="Cliente 5">
                     </div>
                 </div>
                 <div class="brand-item swiper-slide">
                     <div class="content">
-                        <img src="<?php echo IMG_URL; ?>client-6.png" alt="Cliente 6">
+                        <img src="<?php echo imageUrl('client-6.png'); ?>" alt="Cliente 6">
                     </div>
                 </div>
             </div>

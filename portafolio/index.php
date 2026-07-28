@@ -45,7 +45,7 @@ $projects = [
 ?>
 
 <!-- Banner de Portafolio -->
-<section class="page-banner" style="background-image: url('<?php echo IMG_URL; ?>portafolio-banner.jpg')">
+<section class="page-banner" style="background-image: url('<?php echo imageUrl('portafolio-banner.jpg'); ?>')">
     <div class="bg-overlay">
         <div class="color"></div>
     </div>
@@ -77,7 +77,7 @@ $projects = [
             </div>
             <div class="col-md-6">
                 <div class="portfolio-image">
-                    <img src="<?php echo IMG_URL; ?>portafolio-image.jpg" alt="Portafolio GIA MOTION">
+                    <img src="<?php echo imageUrl('portafolio-image.jpg'); ?>" alt="Portafolio GIA MOTION">
                 </div>
             </div>
         </div>
@@ -92,7 +92,7 @@ $projects = [
                 <div class="col-md-4">
                     <div class="portfolio-item">
                         <div class="img-block">
-                            <div class="img" style="background-image: url('<?php echo IMG_URL . $project['image']; ?>')"></div>
+                            <div class="img" style="background-image: url('<?php echo imageUrl($project['image']); ?>')"></div>
                             <div class="overlay">
                                 <div class="overlay-content">
                                     <h3 class="h"><?php echo $project['title']; ?></h3>

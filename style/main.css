@@ -137,6 +137,17 @@ h6, .h6 {
     animation: pulse 1.5s ease-in-out infinite;
 }
 
+.preloader_img {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 24px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
 @keyframes pulse {
     0%, 100% { opacity: 0.3; }
     50% { opacity: 1; }
@@ -169,6 +180,19 @@ h6, .h6 {
 .site-header .site-logo img {
     height: 50px;
     width: auto;
+    display: block;
+}
+
+.site-header .site-logo a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04));
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(10px);
 }
 
 .navigation ul {
@@ -426,6 +450,15 @@ h6, .h6 {
         height: 42px;
     }
 
+    .site-header .site-logo a {
+        padding: 0;
+        border-radius: 10px;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+
     .nav-butter {
         display: block;
     }
@@ -494,6 +527,15 @@ h6, .h6 {
 
     .site-header .site-logo img {
         height: 38px;
+    }
+
+    .site-header .site-logo a {
+        padding: 0;
+        border-radius: 10px;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        backdrop-filter: none;
     }
 
     h1, .h1 { font-size: 28px; }

@@ -5,7 +5,7 @@
 ?>
 
 <!-- Banner de Contacto -->
-<section class="page-banner" style="background-image: url('<?php echo IMG_URL; ?>contacto-banner.jpg')">
+<section class="page-banner" style="background-image: url('<?php echo imageUrl('contacto-banner.jpg'); ?>')">
     <div class="bg-overlay">
         <div class="color"></div>
     </div>

@@ -5,7 +5,7 @@
 ?>
 
 <!-- Banner de Nosotros -->
-<section class="page-banner" style="background-image: url('<?php echo IMG_URL; ?>nosotros-banner.jpg')">
+<section class="page-banner" style="background-image: url('<?php echo imageUrl('nosotros-banner.jpg'); ?>')">
     <div class="bg-overlay">
         <div class="color"></div>
     </div>
@@ -46,7 +46,7 @@
             </div>
             <div class="col-md-6">
                 <div class="about-image">
-                    <img src="<?php echo IMG_URL; ?>nosotros-image.jpg" alt="GIA MOTION - Nosotros">
+                    <img src="<?php echo imageUrl('nosotros-image.jpg'); ?>" alt="GIA MOTION - Nosotros">
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
             <div class="col-md-4">
                 <div class="team-member">
                     <div class="team-image">
-                        <img src="<?php echo IMG_URL; ?>team-1.jpg" alt="CEO - Productor">
+                        <img src="<?php echo imageUrl('team-1.jpg'); ?>" alt="CEO - Productor">
                     </div>
                     <div class="team-info">
                         <h3 class="h">CEO / Productor</h3>
@@ -111,7 +111,7 @@
             <div class="col-md-4">
                 <div class="team-member">
                     <div class="team-image">
-                        <img src="<?php echo IMG_URL; ?>team-2.jpg" alt="Director de Fotografía">
+                        <img src="<?php echo imageUrl('team-2.jpg'); ?>" alt="Director de Fotografía">
                     </div>
                     <div class="team-info">
                         <h3 class="h">Director de Fotografía</h3>
@@ -125,7 +125,7 @@
             <div class="col-md-4">
                 <div class="team-member">
                     <div class="team-image">
-                        <img src="<?php echo IMG_URL; ?>team-3.jpg" alt="Piloto de Drone">
+                        <img src="<?php echo imageUrl('team-3.jpg'); ?>" alt="Piloto de Drone">
                     </div>
                     <div class="team-info">
                         <h3 class="h">Piloto de Drone</h3>
