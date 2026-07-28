@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="copyright">
-                        © Copyright <?php echo date('Y'); ?> - <?php echo COMPANY_NAME; ?>
+                        © Todos los derechos reservados <?php echo date('Y'); ?> - <?php echo COMPANY_NAME; ?>
                     </div>
                 </div>
 
