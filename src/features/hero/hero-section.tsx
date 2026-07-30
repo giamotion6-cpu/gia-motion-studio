@@ -20,7 +20,7 @@ export function HeroSection() {
       <div className="hero__content shell">
         <div className="hero__kicker">
           <span className="signal-dot" />
-          Productora audiovisual · Lima, Perú
+          Productora audiovisual · Cajamarca, Perú
         </div>
         <h1 id="hero-title" className="hero__title">
           <span className="hero__title-line"><span>Ideas que</span></span>

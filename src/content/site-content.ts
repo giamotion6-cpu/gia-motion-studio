@@ -68,7 +68,7 @@ export const projects = [
     number: "01",
     title: "Industria en movimiento",
     category: "Video corporativo",
-    location: "Lima, Perú",
+    location: "Cajamarca, Perú",
     description:
       "Una narrativa de precisión, escala y talento humano diseñada para posicionar una operación industrial.",
     image: "/images/industrial-aerial.jpg",

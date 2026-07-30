@@ -37,7 +37,7 @@ export function AboutSection() {
             <h2>Historias visuales con precisión industrial.</h2>
             <div className="about__columns">
               <p>
-                Somos una productora audiovisual de Lima especializada en transformar procesos complejos en historias claras, humanas y memorables.
+                Somos una productora audiovisual de Cajamarca especializada en transformar procesos complejos en historias claras, humanas y memorables.
               </p>
               <p>
                 Combinamos producción, fotografía, drone, streaming y experiencias inmersivas en un solo equipo listo para trabajar dentro y fuera de campo.

@@ -25,7 +25,7 @@ export const legacyProfile = {
   ],
   historicalContactPlaceholders: {
     phone: "+51 999 999 999",
-    address: "Av. Ejemplo N° 123 - Lima - Perú",
+    address: "Av. Ejemplo N° 123 - Cajamarca - Perú",
     whatsapp: "https://wa.me/51999999999",
     facebook: "#",
     instagram: "#",
@@ -182,6 +182,6 @@ export const legacyContactCopy = {
   intro: "Estamos listos para ayudarte con tu proyecto.",
   formPrompt: "Completa el formulario y nos pondremos en contacto contigo lo antes posible.",
   location:
-    "Estamos ubicados en Lima, Perú. Puedes contactarnos por teléfono, correo electrónico o visitarnos en nuestras oficinas.",
+    "Estamos ubicados en Cajamarca, Perú. Puedes contactarnos por teléfono, correo electrónico o visitarnos en nuestras oficinas.",
   historicalHours: "Lunes a viernes, de 9:00 a 18:00.",
 } as const;

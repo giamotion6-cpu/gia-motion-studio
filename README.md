@@ -266,7 +266,7 @@ Las mejoras son bienvenidas. Antes de abrir un cambio, revisa [CONTRIBUTING.md](
 <div align="center">
   <br>
   <h3>GIA Motion</h3>
-  <p><strong>Producción audiovisual · Lima, Perú</strong></p>
+  <p><strong>Producción audiovisual · Cajamarca, Perú</strong></p>
   <p>Diseñado para convertir atención en movimiento.</p>
   <p>
     <a href="https://gia-motion-zeta.vercel.app">Sitio web</a>

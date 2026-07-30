@@ -46,7 +46,7 @@ Esta colaboración contribuyó a construir una plataforma moderna, escalable y p
 </table>
 
 <div align="center">
-  <p><strong>Emitida el 30 de julio de 2026 · Lima, Perú</strong></p>
+  <p><strong>Emitida el 30 de julio de 2026 · Cajamarca, Perú</strong></p>
   <p>
     <a href="https://www.novatec.ink"><strong>www.novatec.ink</strong></a>
   </p>
