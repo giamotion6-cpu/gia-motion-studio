@@ -1,0 +1,33 @@
+name: Proponer una mejora
+description: Sugiere una mejora visual, técnica o de contenido.
+title: "[Mejora]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: opportunity
+    attributes:
+      label: Oportunidad
+      description: ¿Qué necesidad o problema debería resolver esta mejora?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Propuesta
+      description: Describe la solución que imaginas.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área principal
+      options:
+        - Diseño y experiencia
+        - Contenido
+        - Rendimiento
+        - Accesibilidad
+        - Arquitectura
+        - Documentación
+    validations:
+      required: true
+

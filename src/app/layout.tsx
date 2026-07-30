@@ -39,10 +39,10 @@ export const metadata: Metadata = {
     locale: "es_PE",
     images: [
       {
-        url: "/images/industrial-aerial.jpg",
-        width: 1800,
-        height: 1200,
-        alt: "Producción audiovisual industrial de GIA Motion",
+        url: "/images/gia-social-preview.png",
+        width: 1265,
+        height: 633,
+        alt: "GIA Motion — Ideas que se mueven",
       },
     ],
   },
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "GIA Motion — Ideas que se mueven",
     description: "Productora audiovisual, drone, streaming y experiencias 360°.",
-    images: ["/images/industrial-aerial.jpg"],
+    images: ["/images/gia-social-preview.png"],
   },
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },

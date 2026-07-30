@@ -9,7 +9,8 @@ export function Logo({ priority = false }: { priority?: boolean }) {
         alt=""
         width={954}
         height={475}
-        priority={priority}
+        preload={priority}
+        loading="eager"
         sizes="(max-width: 560px) 112px, 132px"
       />
     </Link>
