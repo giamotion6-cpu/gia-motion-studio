@@ -30,4 +30,3 @@ body:
         - Documentación
     validations:
       required: true
-

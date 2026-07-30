@@ -17,4 +17,3 @@ Incluye capturas o video si el cambio afecta la interfaz.
 ## Impacto
 
 Indica posibles efectos en rendimiento, accesibilidad, contenido o despliegue.
-

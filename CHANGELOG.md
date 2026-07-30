@@ -26,4 +26,3 @@ Los cambios relevantes del proyecto se documentan en este archivo.
 - Nueva identidad visual negra y cinematográfica.
 - Animaciones con Motion, scroll suave con Lenis y escena Three.js.
 - Contenido tipado, SEO, accesibilidad y diseño responsive.
-

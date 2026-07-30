@@ -47,4 +47,3 @@ Añade un caso de estudio
 ## Pull requests
 
 Explica qué cambió, por qué era necesario, cómo fue validado y si existe algún impacto en rendimiento o accesibilidad.
-

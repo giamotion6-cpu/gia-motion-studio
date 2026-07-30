@@ -38,4 +38,3 @@ El roadmap organiza el crecimiento del producto sin comprometer rendimiento ni c
 ## Criterio de priorización
 
 Cada iniciativa se evalúa por impacto comercial, valor para la audiencia, coste de mantenimiento y efecto en Core Web Vitals.
-
