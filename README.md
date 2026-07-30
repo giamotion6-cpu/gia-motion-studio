@@ -193,6 +193,26 @@ La información recuperada de la versión PHP se conserva en `src/content/legacy
 
 ---
 
+## ◈ Colaboración tecnológica
+
+<div align="center">
+  <a href="https://www.novatec.ink">
+    <img src="./public/images/novatec-logo.png" alt="NovaTec — Soluciones que impulsan tu negocio" width="680">
+  </a>
+
+  <p>
+    <strong>NovaTec</strong> colaboró en el diseño, desarrollo, modernización y arquitectura tecnológica de esta experiencia digital.
+  </p>
+
+  <p>
+    <a href="https://www.novatec.ink"><strong>www.novatec.ink</strong></a>
+    ·
+    <a href="./docs/CONSTANCIA_NOVATEC.md"><strong>Ver constancia de colaboración</strong></a>
+  </p>
+</div>
+
+---
+
 <div align="center">
   <h3>GIA Motion</h3>
   <p><strong>Producción audiovisual · Lima, Perú</strong></p>
