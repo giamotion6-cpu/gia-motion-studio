@@ -6,6 +6,7 @@ import { ContactSection } from "@/features/home/contact-section";
 import { ProjectsSection } from "@/features/home/projects-section";
 import { ServicesSection } from "@/features/home/services-section";
 import { StatsSection } from "@/features/home/stats-section";
+import { TrustedClientsSection } from "@/features/home/trusted-clients-section";
 import { WorkflowSection } from "@/features/home/workflow-section";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <ServicesSection />
         <ProjectsSection />
         <StatsSection />
+        <TrustedClientsSection />
         <WorkflowSection />
         <ContactSection />
       </main>

@@ -34,6 +34,16 @@ export interface WorkflowStep {
   text: string;
 }
 
+export interface TrustedClient {
+  name: string;
+  logo?: string;
+}
+
+export interface TrustedClientsGroup {
+  title: string;
+  items: readonly TrustedClient[];
+}
+
 export interface LegacyProject {
   title: string;
   category: string;

@@ -1,4 +1,4 @@
-import type { FeaturedProject, Service, Stat, WorkflowStep } from "@/types/content";
+import type { FeaturedProject, Service, Stat, TrustedClientsGroup, WorkflowStep } from "@/types/content";
 
 export const services = [
   {
@@ -102,6 +102,34 @@ export const stats = [
   { value: "360°", label: "de cobertura" },
   { value: "24/7", label: "ideas en movimiento" },
 ] as const satisfies readonly Stat[];
+
+export const trustedClients = [
+  {
+    title: "Empresas que confían en nosotros",
+    items: [
+      { name: "Municipalidad Provincial de Cajamarca", logo: "" },
+      { name: "Real Plaza", logo: "/images/empresas/real_plaza.jfif" },
+      { name: "Yamaha", logo: "/images/empresas/yamaha.jfif" },
+      { name: "Honda", logo: "/images/empresas/honda.jfif" },
+      { name: "Chevrolet", logo: "/images/empresas/chevrolet.jfif" },
+      { name: "MSA Automotriz", logo: "/images/empresas/msa.jfif" },
+      { name: "Automundo", logo: "" },
+      { name: "FC Cajamarca", logo: "" },
+      { name: "El Zarco Restaurante", logo: "" },
+      { name: "Hotel Cajamarca", logo: "" },
+      { name: "Mitoz", logo: "" },
+      { name: "Alegoria", logo: "" },
+    ],
+  },
+  {
+    title: "Minería",
+    items: [
+      { name: "Shauindo American Pan Silver", logo: "/images/empresas/pan_american.jfif" },
+      { name: "Goldfields", logo: "/images/empresas/gold_fields.jfif" },
+      { name: "Newmont Yanacocha", logo: "/images/empresas/yanacocha.jfif" },
+    ],
+  },
+] as const satisfies readonly TrustedClientsGroup[];
 
 export const workflow = [
   {

@@ -7,7 +7,7 @@ export function WorkflowSection() {
     <section className="process section section--dark">
       <div className="shell">
         <SectionHeading
-          index="05"
+          index="06"
           eyebrow="Nuestro proceso"
           title={<>Del desafío<br /><em>a la pantalla.</em></>}
           side={<p>Un proceso claro mantiene la creatividad enfocada y la producción bajo control.</p>}

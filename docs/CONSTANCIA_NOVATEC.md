@@ -1,4 +1,4 @@
-<div align="center">
+ <div align="center">
   <a href="https://www.novatec.ink">
     <img src="../public/images/novatec-logo.png" alt="NovaTec — Soluciones que impulsan tu negocio" width="720">
   </a>
