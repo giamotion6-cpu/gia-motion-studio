@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowDownRight } from "lucide-react";
-import { CameraShowcase } from "./camera-showcase";
 import { ReelDialog } from "./reel-dialog";
 
 export function HeroSection() {
@@ -13,9 +12,6 @@ export function HeroSection() {
         <div className="hero__media-overlay" />
       </div>
       <div className="hero__noise" aria-hidden="true" />
-      <div className="hero__canvas">
-        <CameraShowcase />
-      </div>
 
       <div className="hero__content shell">
         <div className="hero__kicker">

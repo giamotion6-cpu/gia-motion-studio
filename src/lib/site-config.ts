@@ -15,7 +15,7 @@ export const siteConfig = {
   url: "https://gia-motion-zeta.vercel.app",
   locale: "es_PE",
   contact: {
-    email: "contacto@gia-motion.com",
+    email: "giamotionsac@gmail.com",
     phoneLabel: process.env.NEXT_PUBLIC_WHATSAPP_LABEL ?? "+51 958 428 325",
     whatsapp: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "51958428325").replace(/\D/g, ""),
     city: "Cajamarca, Perú",
