@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Bebas_Neue, Space_Grotesk } from "next/font/google";
 import { CursorGlow } from "@/providers/cursor-glow";
+import { IntroOverlay } from "@/providers/intro-overlay";
 import { SmoothScroll } from "@/providers/smooth-scroll";
 import { buildWhatsAppUrl, siteConfig } from "@/lib/site-config";
 import "./globals.css";
@@ -90,6 +91,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <a className="skip-link" href="#contenido">
           Saltar al contenido
         </a>
+        <IntroOverlay />
         <SmoothScroll />
         <CursorGlow />
         <div className="scroll-progress" aria-hidden="true" />
