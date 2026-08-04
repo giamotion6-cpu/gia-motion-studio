@@ -14,7 +14,7 @@ export const services = [
   {
     number: "02",
     slug: "fotografia",
-    title: "Fotografía industrial",
+    title: "Fotografía profesional",
     short: "Precisión técnica con una mirada cinematográfica.",
     description:
       "Cobertura de operaciones, equipos, personas, eventos y productos con estándares visuales para comunicación corporativa.",
