@@ -26,6 +26,9 @@ export function IntroOverlay() {
     const alreadyShown = sessionStorage.getItem(SESSION_KEY);
 
     if (reduceMotion || alreadyShown) {
+      // Server render always starts visible (window/sessionStorage are unavailable during SSR);
+      // this syncs to the real browser-only value before paint to avoid a flash, not a render loop.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setHidden(true);
       return;
     }
