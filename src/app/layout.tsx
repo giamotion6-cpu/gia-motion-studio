@@ -53,7 +53,8 @@ export const metadata: Metadata = {
     description: "Productora audiovisual, drone, streaming y experiencias 360°.",
     images: ["/images/gia-social-preview.png"],
   },
-  alternates: { canonical: "/" },
+  // CAMBIAMOS LA BARRA POR TU ENLACE OFICIAL ABSOLUTO:
+  alternates: { canonical: "https://giamotionstudio.com" },
   robots: { index: true, follow: true },
 };
 
