@@ -36,6 +36,8 @@ export const metadata: Metadata = {
     title: "GIA Motion — Ideas que se mueven",
     description:
       "Producción audiovisual y tecnología para marcas que quieren ocupar la pantalla.",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
     type: "website",
     locale: "es_PE",
     images: [
@@ -53,9 +55,21 @@ export const metadata: Metadata = {
     description: "Productora audiovisual, drone, streaming y experiencias 360°.",
     images: ["/images/gia-social-preview.png"],
   },
-  // CAMBIAMOS LA BARRA POR TU ENLACE OFICIAL ABSOLUTO:
-  alternates: { canonical: "https://giamotionstudio.com" },
-  robots: { index: true, follow: true },
+  alternates: { canonical: siteConfig.url },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "0FJELa6Aolnn5oZGasQo3P1emfAHGzz7ut80JgPOWeE",
+  },
 };
 
 export const viewport: Viewport = {

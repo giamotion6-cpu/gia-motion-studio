@@ -12,7 +12,7 @@ export const siteConfig = {
   name: "GIA Motion",
   legalName: "GIA MOTION",
   tagline: "Productora audiovisual",
-  url: "https://gia-motion-zeta.vercel.app",
+  url: "https://giamotionstudio.com",
   locale: "es_PE",
   contact: {
     email: "giamotionsac@gmail.com",

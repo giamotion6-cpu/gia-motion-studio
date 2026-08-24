@@ -116,7 +116,7 @@ export const trustedClients = [
       { name: "Automundo", logo: "/images/empresas/automundo.png" },
       { name: "FC Cajamarca", logo: "/images/empresas/f_cajamarca.png" },
       { name: "El Zarco Restaurante", logo: "/images/empresas/zarco.png" },
-      { name: "Hotel Cajamarca", logo: "images/empresas/hotel.png" },
+      { name: "Hotel Cajamarca", logo: "/images/empresas/hotel.png" },
       { name: "Mitoz", logo: "/images/empresas/mitoz.png" },
       { name: "Alegoria", logo: "/images/empresas/alegoria.png" },
     ],
