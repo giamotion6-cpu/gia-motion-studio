@@ -1,6 +1,6 @@
 import type { FeaturedProject, Service, Stat, TrustedClientsGroup, WorkflowStep } from "@/types/content";
 
-export const services = [
+export const services: readonly Service[] = [
   {
     number: "01",
     slug: "video",
@@ -10,6 +10,8 @@ export const services = [
       "Concepto, guion, dirección, rodaje y postproducción para piezas institucionales, campañas y contenido de marca.",
     tags: ["Dirección", "Rodaje", "Postproducción"],
     image: "/images/cinema-crew.jpg",
+    video: "/media/chevrolet-colorado.mp4",
+    videoLabel: "Chevrolet Colorado 2026",
   },
   {
     number: "02",

@@ -11,6 +11,8 @@ export interface Service {
   description: string;
   tags: readonly string[];
   image: string;
+  video?: string;
+  videoLabel?: string;
 }
 
 export interface FeaturedProject {

@@ -7,3 +7,8 @@ out/
 !.env.example
 next-env.d.ts
 *.tsbuildinfo
+
+# Large raw / legacy media files
+public/media/CHEVROLET COLORADO 2026 2.0.mp4
+public/media/chevrolet.mp4
+public/media/chevrolet_opt.mp4
